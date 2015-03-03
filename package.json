@@ -1,0 +1,26 @@
+{
+  "name": "pat-editor",
+  "version": "0.0.1",
+  "title": "Patternslib plugin for a WYSIWYG editor, based on Aloha Editor.",
+  "repository": "https://github.com/Patternslib/pat-editor.git",
+  "licences": [
+    {
+      "type": "BSD",
+      "URL": "LICENSE"
+    }
+  ],
+  "devDependencies": {
+    "bower": "latest",
+    "requirejs": ""
+  },
+  "homepage": "https://gitub.com/Patternslib/pat-editor",
+  "maintainers": [
+    {
+      "name": "JC Brand",
+      "email": "jc@sopkode.com"
+    }
+  ],
+  "dependencies": {
+    "http-server": "^0.7.3"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "pat-editor",
+  "version": "0.0.1",
+  "authors": [
+    "JC Brand <jc@opkode.com>"
+  ],
+  "description": "A Patternslib WYSIWYG editor pattern",
+  "main": "src/pat-editor.js",
+  "keywords": [
+    "editor",
+    "aloha",
+    "wysiwyg",
+    "html"
+  ],
+  "license": "BSD",
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "aloha-editor": "~1.1.0",
+    "patternslib": "master"
+  }
+}
