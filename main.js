@@ -3,6 +3,7 @@ require.config({
     paths: {
         "aloha-editor":                 "bower_components/aloha-editor/",
         "jquery":                       "bower_components/jquery/dist/jquery",
+        "jquery.browser":               "bower_components/jquery.browser/dist/jquery.browser",
         "logging":                      "bower_components/logging/src/logging",
         "mockup-parser":                "bower_components/mockup-core/js/parser",
         "mockup-patterns-base":         "bower_components/mockup-core/js/pattern",
@@ -175,7 +176,7 @@ require.config({
 		"listenforcer/res":             "bower_components/aloha-editor/src/plugins/extra/listenforcer/res",
 
         // Aloha Plugins
-        "ui-plugin":                    "bower_components/aloha-editor/src/lib/aloha/ui/ui-plugin",
+        "ui/ui-plugin":                 "bower_components/aloha-editor/src/plugins/common/ui/lib/ui-plugin",
         "link-plugin":                  "bower_components/aloha-editor/src/lib/aloha/link/link-plugin",
         "table-plugin":                 "bower_components/aloha-editor/src/lib/aloha/table/table-plugin",
         "format-plugin":                "bower_components/aloha-editor/src/lib/aloha/format/format-plugin",
@@ -194,7 +195,10 @@ require.config({
         "paste-plugin":                 "bower_components/aloha-editor/src/lib/aloha/paste/paste-plugin",
         "autoparagraph-plugin":         "bower_components/aloha-editor/src/lib/aloha/autoparagraph/autoparagraph-plugin",
 
-        "aloha":                        "bower_components/aloha-editor/src/lib/aloha/core"
+        "i18n":                        "bower_components/aloha-editor/src/lib/i18n",
+        "vendor":                        "bower_components/aloha-editor/src/lib/vendor",
+        "aloha":                        "bower_components/aloha-editor/src/lib/aloha",
+        "util":                         "bower_components/aloha-editor/src/lib/util"
     },
     "shim": {
         "logging": { "exports": "logging" },
