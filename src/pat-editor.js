@@ -16,7 +16,10 @@
     'use strict';
     var parser = new Parser("editor");
     parser.add_argument("aloha-settings", {}); // Allows the user to specify Aloha settings via JSON
-    parser.add_argument("toolbar-floating", true);
+    parser.add_argument("hide-sidebar", true);
+    parser.add_argument("pin-toolbar", false);
+    parser.add_argument("load-plugins", "common/ui, common/format, common/link");
+    parser.add_argument("show-ribbon", true);
 
     return Base.extend({
         name: 'editor',
@@ -35,16 +38,10 @@
             }
 
             Aloha.settings.toolbar = Aloha.settings.toolbar || {};
-            $.extend(true, Aloha.settings, { toolbar: { floating: options.toolBarFloating || true }});
-
-            Aloha.settings.logLevels = { 'error': true, 'warn': true, 'info': true, 'debug': false, 'deprecated': true };
-            Aloha.settings.errorhandling = false;
-            Aloha.settings.ribbon = {enable: true};
-            Aloha.settings.plugins = Aloha.settings.plugins || {};
-            Aloha.settings.plugins.load = "common/ui, common/format, common/link";
-
-            Aloha.settings.sidebar = Aloha.settings.sidebar || {};
-            Aloha.settings.sidebar.disabled = true;
+            $.extend(true, Aloha.settings, { toolbar: { floating: options.pinToolbar === false ? true: false}});
+            $.extend(true, Aloha.settings, { ribbon: options.showRibbon === false ? false : true});
+            $.extend(true, Aloha.settings, { plugins: { load: options.loadPlugins }});
+            $.extend(true, Aloha.settings, { sidebar: { disabled: options.hideSidebar }});
 
             require(['aloha'], function () {
                 Aloha.ready(function () {
