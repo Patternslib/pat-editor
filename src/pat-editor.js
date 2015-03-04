@@ -24,6 +24,7 @@
     return Base.extend({
         name: 'editor',
         trigger: ".pat-editor",
+        parser: 'patternslib',
 
         init: function patEditor() {
             var options = parser.parse(this.$el);
