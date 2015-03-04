@@ -16,8 +16,7 @@
     'use strict';
     var parser = new Parser("editor");
     parser.add_argument("aloha-settings", {}); // Allows the user to specify Aloha settings via JSON
-    parser.add_argument("toolbar-floating", false);
-
+    parser.add_argument("toolbar-floating", true);
 
     return Base.extend({
         name: 'editor',
@@ -29,14 +28,14 @@
             if (typeof window.Aloha == "undefined") {
                 window.Aloha = { settings: {} };
             }
-            // The "aloha-settings" parameter allows the user to override any
-            // Aloha setting by specifying a JSON object.
-            if (options.alohaSettings && options.alohaSettings.length) {
+            if (typeof options.alohaSettings == "object" && options.alohaSettings.length) {
+                // The "aloha-settings" parameter allows the user to override any
+                // Aloha settings by specifying a JSON object.
                 $.extend(true, Aloha.settings, options.alohaSettings);
             }
 
             Aloha.settings.toolbar = Aloha.settings.toolbar || {};
-            $.extend(true, Aloha.settings, { toolbar: { floating: options.toolBarFloating || false }});
+            $.extend(true, Aloha.settings, { toolbar: { floating: options.toolBarFloating || true }});
 
             Aloha.settings.logLevels = { 'error': true, 'warn': true, 'info': true, 'debug': false, 'deprecated': true };
             Aloha.settings.errorhandling = false;
@@ -49,9 +48,9 @@
 
             require(['aloha'], function () {
                 Aloha.ready(function () {
-                    Aloha.jQuery('#textarea').aloha();
+                    Aloha.jQuery(this.$el).aloha();
                 }.bind(this));
-            });
+            }.bind(this));
         }
     });
 }));
