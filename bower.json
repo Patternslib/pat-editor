@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "aloha-editor": "~1.1.0",
-    "mockup-core": "~2.1.3",
+    "mockup-core": "https://github.com/plone/mockup-core.git#07227ac1dc96858273d0462b29bfb86a1f0849f0",
     "patternslib": "master"
   },
   "resolutions": {
