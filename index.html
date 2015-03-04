@@ -2,21 +2,77 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Aloha Editor Pattern demo</title>
+    <title>pat-editor demo</title>
+    <link rel="stylesheet" href="src/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="src/bower_components/bootstrap/dist/css/bootstrap-theme.css" />
     <link rel="stylesheet" href="src/bower_components/aloha-editor/src/demo/demo-app/app/css/bootstrap.css" />
-    <link rel="stylesheet" href="src/bower_components/aloha-editor/src/demo/demo-app/app/css/aloha-editor-demo.css" />
     <link rel="stylesheet" href="src/bower_components/aloha-editor/src/css/aloha.css" />
     <script data-main="main" src="src/bower_components/requirejs/require.js"></script>
 </head>
-<body>
-    <div id="container">
-        <div>
-            <div class="item">
-                <h1>Aloha Pattern demo</h1>
-
-                <textarea name="textarea" id="textarea" rows="10" class="xxlarge pat-editor"></textarea>
-            </div>
+<body role="document">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>pat-editor demo</h1>
         </div>
+
+        <form>
+            <div class="page-header">
+                <h2>Editing on a textarea</h2>
+            </div>
+            <textarea class="xxlarge pat-editor" rows="5">Ac enim? Dis elit? Nunc et in habitasse penatibus, dis! Platea augue, mauris natoque tempor arcu habitasse ac?</textarea>
+
+            <div class="page-header">
+                <h2>Editing page markup inside a div</h2>
+            </div>
+
+            <div class="pat-editor">
+                <h3>Aliquet urna porttitor dignissim dis, in! Purus ultricies urna velit.</h3>
+                <p>
+                 Rhoncus tincidunt amet et, mauris
+                a nec vel aliquam sociis. Tincidunt tortor amet augue odio
+                etiam nunc penatibus augue etiam porta arcu aliquam arcu?
+                Tempor tempor massa non turpis turpis arcu, porttitor magna
+                urna! <a href="http://en.wikipedia.org/wiki/Functional_programming" target="_blank">Magna porttitor.</a>
+                </p>
+                <p>
+                In? Massa sagittis, nec augue lectus facilisis
+                in ac, platea lectus in risus augue pulvinar lectus non? Mid
+                integer amet ridiculus aliquet! Ac scelerisque, augue? Porta
+                et? Massa urna mauris nunc. Sagittis non lectus porttitor
+                tincidunt porttitor aenean pellentesque pellentesque montes ac
+                magna! Eu dapibus! Rhoncus ut.
+                </p>
+                <h4>Integer non tortor nisi, eros?</h4>
+                <p>
+                Augue aliquet massa amet in est turpis turpis habitasse ac
+                dapibus nec tortor purus vel nunc, magnis quis magna arcu mus
+                in a nunc?  Magna. Enim! Odio. Nunc pulvinar, magna
+                pulvinar hac, porttitor cras cursus? Duis lundium cras magna,
+                magna augue.  
+                </p>
+
+                <ul>
+                    <li><strong>Diam natoque?</strong> <em>Elementum!</em><br>
+                    Mus est phasellus! Sit pid, ac phasellus porta diam ridiculus
+                    nec? Adipiscing duis, mauris? Eros pellentesque parturient, et
+                    nunc magna, diam auctor.
+                    </li>
+
+                    <li><strong>Eros elementum!</strong> <em>Sed enim dapibus scelerisque pulvinar velit!</em><br>
+                    Mus est phasellus! Sit pid, ac phasellus porta diam ridiculus
+                    nec? Adipiscing duis, mauris? Eros pellentesque parturient, et
+                    nunc magna, diam auctor.
+                    </li>
+
+                    <li><strong>Mus in augue, integer?</strong> <em>Cras tincidunt.</em><br>
+                    Nunc mus ac aliquam sociis parturient! Adipiscing! Ut
+                    scelerisque? Ac dis et duis adipiscing ultricies, penatibus,
+                    integer ridiculus tincidunt risus ridiculus elit pid! Magnis ut
+                    elementum nunc egestas habitasse!
+                    </li>
+                </ul>
+            </div>
+        </form>
     </div>
 </body>
 </html>
