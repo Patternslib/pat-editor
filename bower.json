@@ -20,7 +20,8 @@
   "dependencies": {
     "aloha-editor": "~1.1.0",
     "mockup-core": "https://github.com/plone/mockup-core.git#07227ac1dc96858273d0462b29bfb86a1f0849f0",
-    "patternslib": "master"
+    "patternslib": "master",
+    "jquery.browser": "~0.0.7"
   },
   "resolutions": {
     "jquery": "1.11.1",

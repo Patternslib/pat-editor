@@ -3,7 +3,7 @@
         define([
             "jquery",
             "jquery.browser",
-            "mockup-patterns-base",
+            "pat-base",
             "pat-registry",
             "pat-parser"
         ], function() {
@@ -24,7 +24,6 @@
     return Base.extend({
         name: 'editor',
         trigger: ".pat-editor",
-        parser: 'patternslib',
 
         init: function patEditor() {
             var options = parser.parse(this.$el);
